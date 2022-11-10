@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Passenger Information</title>
+    </head>
+    <body>
+        <h1>Passenger List</h1>
+        {% if passenger %}
+        <table>
+            <thead>
+                <th>firstName</th>
+                <th>lastName</th>
+                <th>salary</th>
+                <th>Reward_Points</th>
+            </thead>
+            {% for person in passenger %}
+            <tr>
+                <td>{{person.firstName}}</td>
+                <td>{{person.lastName}}</td>
+                <td>{{person.email}}</td>
+                <td>{{person.reward_points}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No details found</p>
+        {% endif %}
+    </body>
+</html>
